@@ -1,3 +1,4 @@
+import {getIconId} from './getIcon';
 class Template {
   constructor() {
     this.deal = document.getElementById("template-deal").innerHTML;
@@ -45,7 +46,7 @@ class Template {
       if (product === 'Phone') {
         return result;
       }
-      const iconId = this.getIconId(product);
+      const iconId = getIconId(product);
       const iconHtml = this.buildIcon(iconId);
       return (result += this.buildListItem(iconHtml));
     }, "");
@@ -55,22 +56,6 @@ class Template {
     return this.icon.replace("{{ iconId }}", id);
   }
 
-  getIconId(name) {
-    let id;
-    switch (name) {
-      case "TV":
-        id = "tv";
-        break;
-      case "Broadband":
-      case "Fibre Broadband":
-        id = "wifi";
-        break;
-      case "Mobile":
-        id = "mobile";
-        break;
-    }
-    return `#icon-${id}`;
-  }
 }
 
 export default Template;

@@ -1,3 +1,4 @@
+$screen-medium: 768px;
 .deal {
   &__header {
     margin-bottom: 16px;
@@ -13,12 +14,19 @@
   }
 
   &__features {
-    display: flex;
+    display: block;
+    @media screen and (min-width : $screen-medium) {
+      display: flex;
+    }
   }
 
   &__feature {
-    flex: 1 1 0;
-    width: 0;
+    width: 100%;
+    padding: 10px;
+    @media screen and (min-width : $screen-medium) {
+      flex: 1 1 0;
+      width: 0;
+    }
   }
 
   &__feature-label {
