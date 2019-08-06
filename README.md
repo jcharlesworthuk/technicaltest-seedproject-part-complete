@@ -1,5 +1,20 @@
 # Decision Technologies Front-End Technical Test
 
+## Comments from Saravanan Gopalan
+
+- Added filter logic as per Acceptance Criteria.
+- Added test file for filter logic and getIcon utils.
+- Updatd little bit UI and added bit responsive to show feature details.
+
+## Updated files
+
+- ViewDeals.js
+- Template.js
+- getDealFilter.js(Added)
+- getIcon.js(Added)
+- getDealFilter.test.js(Added)
+- getIcon.test.js(Added)
+
 ## Prerequisites
 
 - NodeJS (at least latest LTS)

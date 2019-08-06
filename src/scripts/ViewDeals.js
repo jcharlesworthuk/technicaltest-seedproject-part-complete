@@ -1,3 +1,5 @@
+import { getDealFilter } from "./getDealFilter";
+
 class ViewDeals {
   constructor(store, template) {
     this.store = store;
@@ -13,7 +15,9 @@ class ViewDeals {
   }
 
   update(state) {
-    this.render(this.store.deals)
+    const filteredPoducts = getDealFilter(state,this.store.deals)
+    console.log('afer assi', filteredPoducts)
+    this.render(filteredPoducts);
   }
 }
 
